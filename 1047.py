@@ -1,3 +1,6 @@
+import datetime
+
+
 def to_int(l):
     """Retorna uma lista com todos os seus elementos convertidos para
     o tipo inteiro.
@@ -9,7 +12,25 @@ def duracao(horas_inicio, minutos_inicio, horas_fim, minutos_fim):
     """Retorna uma tupla com as horas e os minutos de duração, respecti
     vamente.
     """
-    return total_horas, total_minutos
+    if horas_inicio == horas_fim and minutos_inicio == minutos_fim:
+        horas_duracao, minutos_duracao = 24, 0
+
+    else:
+        horas_duracao = horas_fim - horas_inicio
+
+        if horas_duracao < 0:
+            horas_duracao += 24
+
+        minutos_duracao = minutos_fim - minutos_inicio
+
+        if minutos_duracao < 0:
+            minutos_duracao += 60
+            horas_duracao -= 1
+
+        if horas_duracao < 0:
+            horas_duracao += 24
+
+    return horas_duracao, minutos_duracao
 
 
 def main():
