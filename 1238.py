@@ -1,3 +1,11 @@
+def main():
+    n = int(input())
+
+    for i in range(n):
+        string1, string2 = input().split()
+        print(combinador(string1, string2))
+
+
 def combinador(string1, string2):
     tail = ''
 
@@ -23,14 +31,6 @@ def combinador(string1, string2):
     resultado += tail
 
     return resultado
-
-
-def main():
-    n = int(input())
-
-    for i in range(n):
-        string1, string2 = input().split()
-        print(combinador(string1, string2))
 
 
 if __name__ == "__main__":
