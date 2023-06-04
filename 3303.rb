@@ -1,0 +1,1 @@
+if gets.length >= 10 then puts "palavrao"  else puts "palavrinha" end
